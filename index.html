@@ -26,8 +26,7 @@
 
 	<script>
 		const baseUrl = "http://rbr7taeya.hd-bkt.clouddn.com/";
-		const location = window.location;
-		const id = location.search.split("?id=")[1] || "";
+		const id = window.location.search.split("?id=")[1] || "";
 		const video = document.querySelector("#video");
 
 		video.src = baseUrl + id + ".mp4";
