@@ -21,7 +21,7 @@
 	</style>
 
 	<body>
-		<video autoplay controls id="video"></video>
+		<video controls id="video"></video>
 	</body>
 
 	<script>
@@ -30,5 +30,6 @@
 		const video = document.querySelector("#video");
 
 		video.src = baseUrl + id + ".mp4";
+		video.play();
 	</script>
 </html>
