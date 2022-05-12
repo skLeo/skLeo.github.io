@@ -1,1 +1,35 @@
-hello world
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<style>
+		html,
+		body {
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		video {
+			height: 100%;
+		}
+	</style>
+
+	<body>
+		<video autoplay controls id="video"></video>
+	</body>
+
+	<script>
+		const baseUrl = "http://rbr7taeya.hd-bkt.clouddn.com/";
+		const location = window.location;
+		const id = location.search.split("?id=")[1] || "";
+		const video = document.querySelector("#video");
+
+		video.src = baseUrl + id + ".mp4";
+	</script>
+</html>
